@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Javascript_test</title>
+
+    <style>
+    /* id = 100 */
+    /* class = 10 */
+    /* tag = 1 */
+
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .box.on{ 
+        /* 띄어쓰기X : box와 on이라는 클래스를 함께 가지고 있다면 / 
+           띄어쓰기O : box 안에있는 on */
+        /* 클래스가 많이 들어가는게 우선 */
+           background-color: green;
+
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="box"></div>
+    
+
+
+<script>
+
+    //데이터타입
+    //var name = "SeoanLee"; 
+    const name = "SeoanLee"; //const 변함없는, 상수(다른게 절대 들어올수없음)
+    const age = 20;
+    let married = false; //let 그릇안에 여러가지가 들어갈수있게함 (변형가능)
+    let boyFriend; //undefined
+    let money = null;
+
+    console.log(name);
+    console.log(typeof name);
+
+
+    //연산자
+    console.log(2-3);
+    console.log(name === 'SeoanLee');
+    console.log(age > 30);
+
+
+    //조건문
+    if(name === 'SeoanLee'){
+        console.log('정답');
+    } else {
+        console.log('오답');
+    }
+
+    if(name === 'SeoanKim'){
+        console.log('Hello~ i am Seoan Kim!')
+    } else if(name === 'SaeanPark'){
+        console.log('Hi! i am great park')
+    } else if(name === 'SeoanLee'){
+        console.log('GutenTag! Ich bin Seoan Lee')
+    } else {
+        console.log('Bonjour Je suis Seoan')
+    }
+
+
+    //반복문
+    //for(정의; 조건; 갱신)
+    for(let i = 0; i < 300; i++){
+       // console.log(i + '번');
+    }
+
+
+    //선택자 (DOM object 컨트롤)
+    //document.getElementsByClassName('box');
+    //document.querySelectorAll('.box') 배열사용할때
+
+    //변수에 담아서 사용하는게 좋음
+    const box = document.querySelector('.box');
+    console.log(box);
+
+    //click event
+    box.addEventListener('click', function(){
+        console.log('누르지마')
+        
+    //box.style.background = "blue";
+
+    box.classList.add('on'); //box를 클릭할때 class추가
+    box.classList.remove('on'); //box를 클릭할때 class추가
+    //box.classList.toggle('on'); //클릭한 대상한테 on이 없으면 on을 넣어주고, on이 있으면 on을 빼줌
+    
+    //tip! 개발자도구에서 가운데 선이 그어져있다면 들어오긴했으나 다른 우선자에게 밀렸다는뜻
+    
+    });
+
+</script>
+
+</body>
+</html>

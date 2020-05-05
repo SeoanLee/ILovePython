@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 반응형으로 만들기 --> 
+    <!-- 모든 크기는 device와 동일하게, scale=1.0 -->
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<body>
+
+
+<section id="container">
+
+
+    <header id="header">
+        <section class="inner">
+
+            <h1 class="logo"> 
+                <!-- logo는 h1태그를 사용함 -->
+                <a href="index.html">
+                    <!-- logo 클릭시 index로 이동 -->
+                    <div class="sprite_insta_icon"></div>
+                    <div class="sprite_write_logo"></div>
+                    <!-- www.spritecow.com -->
+                    <!-- background 이미지는 여백을 차지하지않음
+                    때문에 강제로 형태를 넣어줘야함 -->
+                </a>
+            </h1>
+
+            <div class="search_box">
+                <input type="text" placeholder="검색" id="search-field">
+
+                <div class="fake_field">
+                    <span class="sprite_small_search_icon"></span>
+                    <span>검색</span>
+                </div>
+            </div>
+
+            <div class="right_icons">
+                <a href="new_post.html"><div class="sprite_camera_icon"></div></a>
+                <a href="login.html"><div class="sprite_compass_icon"></div></a>
+                <a href="follow.html"><div class="sprite_heart_icon_outline"></div></a>
+                <a href="profile.html"><div class="sprite_user_icon_outline"></div></a>
+            </div>
+
+        </section>
+
+    </header>
+
+    <!-- 반응형 시작시 보일 hidden_menu -->
+    <div class="hidden_menu">
+        <div class="scroll_inner">
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+            <div class="user">
+                <div class="thumb_img"><img src="imgs/thumb.jpeg" alt="프로필사진"></div>
+                <div class="id">DwayneJohnson</div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <section id="main_container">
+        <div class="inner">
+
+            <div class="contents_box">
+
+                <!-- article 1 -->
+                <article class="contents">
+                    <header class="top">
+                        <div class="user_container">
+                            <div class="profile_img">
+                                <img src="imgs/thumb.jpeg" alt="프로필이미지">
+                            </div>
+                            <div class="user_name">
+                                <!-- text 속성 설정된것 불러와서 사용하기 -->
+                                <div class="nick_name m_text">SeoanLee</div>
+                                <div class="country s_text">Seoul, South Korea</div>
+                            </div>
+
+                        </div>
+
+                        <div class="sprite_more_icon" data-name="more">
+                            <!-- more아이콘 안에 toggle로 메뉴만들기 -->
+                            <ul class="toggle_box">
+                               <li><input type="submit" class="follow" value="팔로우" data-name="follow"></li>
+                                <li>수정</li>
+                                <li>삭제</li>
+                            </ul>
+                        </div>
+                    </header>
+
+                    <div class="img_section">
+                        <div class="trans_inner">
+                            <div><img src="imgs/img_section/img01.jpg" alt="visual01"></div>
+                        </div>
+                    </div>
+
+                    <div class="bottom_icons">
+                        <div class="left_icons">
+                            <!-- 애니메이션 형태로 들어가려면 div로 한번 감싸주는게 좋음 -->
+                            <div class="heart_btn">
+                                <div class="sprite_heart_icon_outline" name="37" data-name="heartbeat"></div>
+                            </div>
+                            <div class="sprite_bubble_icon"></div>
+                            <div class="sprite_share_icon" data-name="share"></div>
+                        </div>
+                        <div class="right_icon">
+                            <div class="sprite_bookmark_outline" name="37" data-name="bookmark"></div>
+                        </div>
+                    </div>
+
+                    <div class="likes m_text">
+                        <!-- 좋아요 -->
+                        <span id="like-count-37"><!--2,346--></span>
+                        <span id="bookmark-count-37"></span>
+                        <!-- 개 -->
+                    </div>
+
+                    <div class="comment_container">
+                        <div class="comment" id="comment-list-ajax-post-37">
+                            <div class="comment-detail">
+                                <div class="nick_name m_text">kangjun_Seo</div>
+                                <div>내 여자친구 상이네</div>
+                            </div>
+                        </div>
+                        <div class="small_heart">
+                            <div class="sprite_small_heart_icon_outline"></div>
+                        </div>
+                    </div>
+
+                    <div class="timer">1시간 전</div>
+
+                    <div class="comment_field" id="add-comment-post-37">
+                        <input type="text" placeholder="댓글달기">
+                        <div class="upload_btn m_text" data-name="comment">게시</div>
+                    </div>
+                </article>
+
+                <!-- article 2 -->
+                <article class="contents">
+                        <header class="top">
+                            <div class="user_container">
+                                <div class="profile_img">
+                                    <img src="imgs/thumb.jpeg" alt="프로필이미지">
+                                </div>
+                                <div class="user_name">
+                                    <!-- text 속성 설정된것 불러와서 사용하기 -->
+                                    <div class="nick_name m_text">SeoanLee</div>
+                                    <div class="country s_text">Seoul, South Korea</div>
+                                </div>
+    
+                            </div>
+    
+                            <div class="sprite_more_icon" data-name="more">
+                                <!-- more아이콘 안에 toggle로 메뉴만들기 -->
+                                <ul class="toggle_box">
+                                   <li><input type="submit" class="follow" value="팔로우" data-name="follow"></li>
+                                    <li>수정</li>
+                                    <li>삭제</li>
+                                </ul>
+                            </div>
+                        </header>
+    
+                        <div class="img_section">
+                            <div class="trans_inner">
+                                <div><img src="imgs/img_section/img01.jpg" alt="visual01"></div>
+                            </div>
+                        </div>
+    
+                        <div class="bottom_icons">
+                            <div class="left_icons">
+                                <!-- 애니메이션 형태로 들어가려면 div로 한번 감싸주는게 좋음 -->
+                                <div class="heart_btn">
+                                    <div class="sprite_heart_icon_outline" name="37" data-name="heartbeat"></div>
+                                </div>
+                                <div class="sprite_bubble_icon"></div>
+                                <div class="sprite_share_icon" data-name="share"></div>
+                            </div>
+                            <div class="right_icon">
+                                <div class="sprite_bookmark_outline" name="37" data-name="bookmark"></div>
+                            </div>
+                        </div>
+    
+                        <div class="likes m_text">
+                            <!-- 좋아요 -->
+                            <span id="like-count-37"><!--2,346--></span>
+                            <span id="bookmark-count-37"></span>
+                            <!-- 개 -->
+                        </div>
+    
+                        <div class="comment_container">
+                            <div class="comment" id="comment-list-ajax-post-37">
+                                <div class="comment-detail">
+                                    <div class="nick_name m_text">kangjun_Seo</div>
+                                    <div>내 여자친구 상이네</div>
+                                </div>
+                            </div>
+                            <div class="small_heart">
+                                <div class="sprite_small_heart_icon_outline"></div>
+                            </div>
+                        </div>
+    
+                        <div class="timer">1시간 전</div>
+    
+                        <div class="comment_field" id="add-comment-post-37">
+                            <input type="text" placeholder="댓글달기">
+                            <div class="upload_btn m_text" data-name="comment">게시</div>
+                        </div>
+                    </article>
+
+                    <!-- article 3 -->
+                    <article class="contents">
+                            <header class="top">
+                                <div class="user_container">
+                                    <div class="profile_img">
+                                        <img src="imgs/thumb.jpeg" alt="프로필이미지">
+                                    </div>
+                                    <div class="user_name">
+                                        <!-- text 속성 설정된것 불러와서 사용하기 -->
+                                        <div class="nick_name m_text">SeoanLee</div>
+                                        <div class="country s_text">Seoul, South Korea</div>
+                                    </div>
+        
+                                </div>
+        
+                                <div class="sprite_more_icon" data-name="more">
+                                    <!-- more아이콘 안에 toggle로 메뉴만들기 -->
+                                    <ul class="toggle_box">
+                                       <li><input type="submit" class="follow" value="팔로우" data-name="follow"></li>
+                                        <li>수정</li>
+                                        <li>삭제</li>
+                                    </ul>
+                                </div>
+                            </header>
+        
+                            <div class="img_section">
+                                <div class="trans_inner">
+                                    <div><img src="imgs/img_section/img01.jpg" alt="visual01"></div>
+                                </div>
+                            </div>
+        
+                            <div class="bottom_icons">
+                                <div class="left_icons">
+                                    <!-- 애니메이션 형태로 들어가려면 div로 한번 감싸주는게 좋음 -->
+                                    <div class="heart_btn">
+                                        <div class="sprite_heart_icon_outline" name="37" data-name="heartbeat"></div>
+                                    </div>
+                                    <div class="sprite_bubble_icon"></div>
+                                    <div class="sprite_share_icon" data-name="share"></div>
+                                </div>
+                                <div class="right_icon">
+                                    <div class="sprite_bookmark_outline" name="37" data-name="bookmark"></div>
+                                </div>
+                            </div>
+        
+                            <div class="likes m_text">
+                                <!-- 좋아요 -->
+                                <span id="like-count-37"><!--2,346--></span>
+                                <span id="bookmark-count-37"></span>
+                                <!-- 개 -->
+                            </div>
+        
+                            <div class="comment_container">
+                                <div class="comment" id="comment-list-ajax-post-37">
+                                    <div class="comment-detail">
+                                        <div class="nick_name m_text">kangjun_Seo</div>
+                                        <div>내 여자친구 상이네</div>
+                                    </div>
+                                </div>
+                                <div class="small_heart">
+                                    <div class="sprite_small_heart_icon_outline"></div>
+                                </div>
+                            </div>
+        
+                            <div class="timer">1시간 전</div>
+        
+                            <div class="comment_field" id="add-comment-post-37">
+                                <input type="text" placeholder="댓글달기">
+                                <div class="upload_btn m_text" data-name="comment">게시</div>
+                            </div>
+                    </article>
+
+            </div>
+
+            <!-- 무한스크롤 -->
+            <!-- ajax 통신이 얼만큼 되고, 남아있는 페이지 개수가 몇개가 되는지 설정,
+                어느정도 지점에 도달시 무한스크롤이 이루어지지않도록 -->
+            <input type="hidden" id="page" value="0">
+
+            <!-- Side box -->
+            <div class="side_box">
+                <div class="user_profile">
+                    <div class="profile_thumb">
+                        <img src="imgs/thumb.jpeg" alt="프로필사진">
+                    </div>
+                    <div class="detail">
+                        <div class="id m_text">KindTiger</div>
+                        <div class="ko_name">심선범</div>
+                    </div>
+                </div>
+
+                <article class="story">
+                    <header class="story_header">
+                        <div>스토리</div>
+                        <div class="more">모두 보기</div>
+                    </header>
+
+                    <!-- stroy안에서 scroll이 되야하기때문에 div로 한번 감싸기 -->
+                    <div class="scroll_inner">
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="imgs/thumb02.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">kind_tigerrrr</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="imgs/thumb02.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">kind_tigerrrr</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="imgs/thumb02.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">kind_tigerrrr</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="imgs/thumb02.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">kind_tigerrrr</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                        <div class="thumb_user">
+                            <div class="profile_thumb">
+                                <img src="imgs/thumb02.jpg" alt="프로필사진">
+                            </div>
+                            <div class="detail">
+                                <div class="id">kind_tigerrrr</div>
+                                <div class="time">1시간 전</div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="recommend">
+                    <header class="reco_header">
+                        <div>회원님을 위한 추천</div>
+                        <div class="more">모두 보기</div>
+                    </header>
+
+                    <div class="thumb_user">
+                        <div class="profile_thumb">
+                            <img src="imgs/thumb02.jpg" alt="프로필사진">
+                        </div>
+                        <div class="detail">
+                            <div class="id">kind_tigerrrr</div>
+                            <div class="time">1시간 전</div>
+                        </div>
+                    </div>
+                    <div class="thumb_user">
+                        <div class="profile_thumb">
+                            <img src="imgs/thumb02.jpg" alt="프로필사진">
+                        </div>
+                        <div class="detail">
+                            <div class="id">kind_tigerrrr</div>
+                            <div class="time">1시간 전</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script> -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
